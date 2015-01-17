@@ -1,0 +1,32 @@
+10
+
+/setblock to place a door? (self.redstone)
+
+submitted 1 year ago by Hucota7
+
+Doors are finicky things. When I tried to use /setblock for a door, it spawns just the bottom half, and it's invisible. Can I actually spawn a door with /setblock?
+
+    5 comments
+    share
+
+all 5 comments
+sorted by:
+best
+
+[–]pau101 3 points 1 year ago 
+
+You have to /setblock each half, the direction of the door and state is dependent on the bottom half and the top determines which side the hinge is on. The following is the bottom half meta for directions using the format 'Facing: closed meta, open meta':
+
+North: 1, 5
+
+South: 3, 7
+
+East: 2, 6
+
+West: 0, 4
+
+For upper half hinge with the orientation looking at the door Using format 'Side: hinge meta':
+
+Right: 8
+
+Left: 9

@@ -1,0 +1,85 @@
+Minecraft Coding Club			
+Program list			
+			
+Name				Description
+ballbounce.py			A simple modelling a bouncing ball
+binaryCounter.py		Counting in decimal, hexadecimal and binary
+blockhit.py			Detecting if a block is hit with the sword
+camera.py			Using the Minecraft camera to give us a tour of the world
+circle.py			Draw a circle using wool blocks
+circleV2.py			Draw a circle that changes colour
+circleV3.py			Draw patterns using circles and loops
+clearblocks.py			Use setblocks to clear a space
+clockV1.py			First version of a Minecraft digital clock
+clockV2.py			An improved digital clock that doesn't flicker as much
+clockV3.py			Further improved digital clock that allows us to change colour
+clockV4.py			A "2D" version of the digital clock
+disco.py			Using binary data to generate a flashing shape
+drawblocks.py			Draw all the allowed blocks on the Raspberry Pi version of Minecraft
+drawcsv.py			First version of a program that draws saved buildings
+drawcsv2.py			Improved version of the draw saved buildings code
+drawmessageV1.py		Draw a message in Minecraft blocks
+drawmessageV2.py		Draw a flat message in Minecraft blocks
+eraser.py			Rub out the world as we move around
+fatfont.py			Use a really wide font to draw messages
+findtreasure.py			A simple treasure hunt program
+firework.py			Launch a Minecraft Firework and draw an explosion
+fireworkV2.py			A firework that drifts from its launch position
+fireworkV3.py			A firework that has flames as it launches
+fireworkV4.py			A multi threaded firework program that launches 3 fireworks
+fireworkV5.py			Pi Minecraft has no night time, so launch some "indoor" fireworks
+firsthouse.py			A simple house drawn using code
+firsthouseV2.py			A house with a pyramid roof and rainbow
+forest.py			Using loops to draw a forest
+forloop.py			A simple for loop
+fortune.py			Using a text file and random numbers to tell your fortune
+fruit.py			A first version of a Minecraft One Armed Bandit / fruit machine
+fruitV2.py			An improved version of the fruit machine that allows us to play as long as we want
+helloworld.py			Our very first program "hello world"
+helloworldV2.py			Hello world with minimal comments
+helloworldV3.py			Introducing variables 
+helloworldV4.py			Combining variables 
+helloworldV5.py			More on combining variables
+helloworldV6.py			Using methods on variables to convert to upper and lower case messages
+helloworldV7.py			Typing and displaying input
+horserace.py			First version of a horse race
+horseraceV2.py			Improved version of the horse race that allows us to start it
+howbig.py			Report how large a saved building is
+jsw.py				A blast from the past, using data and frames to animate a character walking
+jswcolour.py			A colour version of our character walking
+justrainbow.py			Draw a Minecraft rainbow
+kalint.py			A very old kaleidoscope program updated to work in Minecraft
+lavalake.py			Make a lava lake
+lines.py			Drawing lines in Minecraft using Bresenham's algorithm
+loopsbroke.py			Different variable types can cause problems
+loopswork.py			Changing one variable type to another
+mandel.py			A Minecraft Mandelbrot lake
+maze.py				Generate a maze in Minecraft
+menger.py			A Menger Sponge shape in Minecraft
+moveplayer.py       Introduction to moving a player using setTilePos()
+PiSSH-utility.py		Some SSH code to help manage multiple Raspberry Pi machines (instructor use)
+rainbow.py			Using loops to draw a rainbow
+rainbow2.py			A rainbow with a difference
+readblocks.py			Saving parts of the Minecraft world to a file for use later
+replace.py			Simple replace one block type with another in a given area
+replaceV2.py			A version of the replace block that allows more options
+rolldice.py			A Minecraft dice
+rolldiceV2.py			An improved dice that animates whilst "rolling"
+roller.py			A vertical water roller coaster ride
+roller2.py			A horizontal water ride
+setblock.py			Using setblock to draw a Minecraft block
+setblocks.py			Using setblocks to draw a cuboid shape
+settingBlocks.py		Dropping lava in the air
+sine.py				Drawing a sine wave shape
+snake2.py			Using a technique called recursion to draw a snake pattern
+stringslice.py			How to chop up string variables
+tables.py			Using loops to do times tables
+teleport.py			Make Minecraft teleportals
+tennisV1.py			Bouncing a ball around 
+tennisV2.py			Adding bats that play tennis
+wallV1.py			Using a loop to build a single layer of coloured wool
+wallV2.py			Using two loops to build a wall of coloured wool
+whackamole.py			A version of the "whack a mole" game using furnaces
+whereamiV1.py			Reporting where we are standing in the Minecraft world
+whereamiV2.py			Using a loop to track where we are
+whereamiV3.py			Improved version that only reports where we are if we move
