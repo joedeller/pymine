@@ -82,7 +82,8 @@ def gitPull(destip,gitpass):
     getBuffer(chan,".com': ")
 
     # Supply username
-    chan.send('joedeller@outlook.com\n')
+    username = "" + ' \n'
+    chan.send(username)
     time.sleep(2)
     getBuffer(chan,".com': ")
 
