@@ -15,7 +15,8 @@ table = 8
 
 for count in range(1, 13):
     answer = count * table
+    stringTable = str (table)
     stringCount = str(count)
     stringAnswer = str(answer)
-    mc.postToChat(stringCount + " times nine = " + stringAnswer)
+    mc.postToChat(stringCount + " times " + str(stringTable) + " = " + stringAnswer)
     time.sleep(1)
