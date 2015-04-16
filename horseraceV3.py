@@ -11,10 +11,10 @@ def DrawCourse(x, y, z, course_width, course_length):
     height = 6
     leftPostX = x - 1
     rightPostX = x + course_width + 1
-    track_end = z + course_length
+    track_end = z - course_length
 
     mc.setBlocks(x, y - 1, z, x + course_width, y - 1, track_end, block.GRAVEL.id)
-    track_end += 1
+    track_end -= 1
 
     leftPost = (leftPostX, y, track_end, leftPostX, y + height, track_end)
     rightPost = (rightPostX, y, track_end, rightPostX, y + height, track_end)
@@ -30,7 +30,7 @@ def DrawCourse(x, y, z, course_width, course_length):
     colourA = 0
     for track in range(x, x + course_width + 1):
         mc.setBlock(track, y - 1, track_end, block.WOOL.id, colourA)
-        mc.setBlock(track, y - 1, track_end + 1, block.WOOL.id, colourA ^15 )
+        mc.setBlock(track, y - 1, track_end - 1, block.WOOL.id, colourA ^15 )
 
         mc.setBlock(track, y + height, track_end, block.WOOL.id, colourA ^15 )
         mc.setBlock(track, y + height + 1, track_end, block.WOOL.id, colourA)
@@ -48,7 +48,7 @@ def Race(x, y, start_line, finish_line, horseCount):
     horses = [start_line] * horseCount
     winner = None
 
-    while max(horses) <= finish_line:
+    while min(horses) >= finish_line:
         for horse in range(0, horseCount):
             moves = random.randint(0, 3)
             # print "horse  "+str(horse) +" moves = "+str(moves)
@@ -57,10 +57,10 @@ def Race(x, y, start_line, finish_line, horseCount):
                 horse_z = horses[horse]
                 # Rub out the horse and then move it forward one block at a time
                 mc.setBlock(x + horse, y, horse_z, block.AIR)
-                mc.setBlock(x + horse, y, horse_z + 1, block.WOOL.id, horse)
-                horses[horse] += 1
+                mc.setBlock(x + horse, y, horse_z - 1, block.WOOL.id, horse)
+                horses[horse] -= 1
                 # Now that we have moved, is this horse at or past  the finish?
-                if (horse_z >= finish_line) and (winner is None):
+                if (horse_z <= finish_line) and (winner is None):
                     winner = horse
                     print "Winner is :" + str(winner)
                 # Wait a little bit, otherwise we won't see the race!
@@ -97,12 +97,12 @@ def main():
     horseCount = 8  # Note that too many will make the code very slow and >9 will break the code
 
     # Clean up the world so we have a nice flat space
-    mc.setBlocks(x - 10, y, z - 10, x + 20, y + 20, z + track_length + 10, block.AIR.id)
+    mc.setBlocks(x - 10, y, z - track_length - 5, x + 20, y + 20, z  + 10, block.AIR.id)
     # Setup a grass floor
-    mc.setBlocks(x - 12, y - 2, z - 12, x + 20, y - 1, z + track_length + 10, block.GRASS.id)
+    mc.setBlocks(x - 12, y - 2, z - track_length - 2, x + 20, y - 1, z  + 10, block.GRASS.id)
     # The start line will be one block back from where we are standing
-    start_line = z + 1
-    finish_line = start_line + track_length
+    start_line = z - 1
+    finish_line = start_line - track_length
     # Draw a stone block right in front of where we are standing
     # We we right click it with our sword it will start the race
     mc.setBlock(x, y, start_line, block.STONE.id)
